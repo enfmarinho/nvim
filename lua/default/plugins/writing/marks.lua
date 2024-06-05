@@ -1,0 +1,31 @@
+return {
+	"chentoast/marks.nvim",
+	event = "VeryLazy",
+	enabled = true,
+	opts = {
+		default_mappings = false,
+		builtin_marks = {},
+		cyclic = true,
+		force_write_shada = false,
+		refresh_interval = 150,
+		sign_priority = { lower = 10, upper = 15, builtin = 8, bookmark = 20 },
+		excluded_filetypes = {},
+		excluded_buftypes = {},
+		bookmark_0 = {
+			sign = "⚑",
+			virt_text = "",
+			annotate = false,
+		},
+		mappings = {
+			set_next = "<leader>mm",
+			toggle = "<leader>mt",
+			delete_line = "<leader>md",
+			delete_buf = "<leader>mD",
+			next = "<leader>mn",
+			prev = "<leader>mp",
+			preview = "<leader>mP",
+			set = "<leader>ms",
+			delete = "<leader>mw",
+		},
+	},
+}
