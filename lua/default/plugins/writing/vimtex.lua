@@ -1,6 +1,6 @@
 return {
 	"lervag/vimtex",
 	enabled = true,
-	ft = { "latex" },
+	ft = { "latex", "tex" },
 	event = "VeryLazy",
 }
