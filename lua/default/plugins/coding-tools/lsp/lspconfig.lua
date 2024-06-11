@@ -92,12 +92,6 @@ return {
 			capabilities = default_capabilities,
 			on_attach = on_attach,
 		})
-		-- Configure elixir server
-		lspconfig.elixirls.setup({
-			cmd = { "/opt/homebrew/Cellar/elixir-ls/0.20.0/libexec/language_server.sh" },
-			capabilities = default_capabilities,
-			on_attach = on_attach,
-		})
 		-- Configure swift server
 		lspconfig.sourcekit.setup({
 			filetypes = { "swift" },
