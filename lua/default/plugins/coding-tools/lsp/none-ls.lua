@@ -18,6 +18,8 @@ return {
 				formatting.goimports_reviser,
 				formatting.golines,
 				formatting.black,
+				formatting.swiftlint,
+				formatting.swiftformat,
 				-- formatting.reorder_python_imports,
 				-- diagnostics.credo,
 				-- formatting.mix,
