@@ -15,7 +15,7 @@ return {
 		navbuddy.setup({
 			window = {
 				border = "rounded",
-				size = { height = "60%", width = "70%" },
+				size = { height = "90%", width = "90%" },
 				position = { row = "40%", col = "50%" },
 				scrolloff = nil,
 				sections = {
