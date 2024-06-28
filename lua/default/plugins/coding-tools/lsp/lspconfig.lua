@@ -83,7 +83,7 @@ return {
 			on_attach = on_attach,
 		})
 		-- Configure python server
-		lspconfig.pyright.setup({
+		lspconfig.ruff_lsp.setup({
 			capabilities = default_capabilities,
 			on_attach = on_attach,
 		})
