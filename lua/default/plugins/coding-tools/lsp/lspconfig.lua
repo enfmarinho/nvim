@@ -94,6 +94,8 @@ return {
 		})
 		-- Configure swift server
 		lspconfig.sourcekit.setup({
+			capabilities = default_capabilities,
+			on_attach = on_attach,
 			filetypes = { "swift" },
 		})
 	end,
