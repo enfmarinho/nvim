@@ -90,7 +90,10 @@ return {
 				-- map('n', '<leader>tb', gs.toggle_current_line_blame) -- Toggle blame line.
 			end,
 		})
+
 		vim.cmd("highlight SignColumn guibg=none")
+		vim.cmd("highlight GitSignsStagedAddLn guifg=#3E68AB")
+		vim.cmd("highlight GitSignsStagedAdd guifg=#3E68AB")
 		vim.cmd("highlight GitSignsAdd guifg=#238e14")
 		vim.cmd("highlight GitSignsChange guifg=#7f148e")
 		vim.cmd("highlight GitSignsDelete guifg=#E34b28")
