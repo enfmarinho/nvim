@@ -10,8 +10,16 @@ return {
 		local diagnostics = null_ls.builtins.diagnostics
 		local opts = {
 			sources = {
+				formatting.clang_format.with({
+					args = {
+						"-style=file",
+						"--fallback-style=google",
+						"--offset",
+						"--length",
+						{ use_length = true, row_offset = -1, col_offset = -1 },
+					},
+				}),
 				formatting.cmake_format,
-				formatting.clang_format,
 				formatting.stylua,
 				formatting.rustfmt,
 				formatting.gofumpt,
