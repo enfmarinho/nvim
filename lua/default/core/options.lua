@@ -13,11 +13,11 @@ local options = {
 	autoindent = true,
 	smartindent = true,
 	smarttab = true,
-	tabstop = 2,
+	tabstop = 4,
 	numberwidth = 4,
 	shiftwidth = 2,
 	expandtab = true,
-	softtabstop = 2,
+	softtabstop = 4,
 
 	fillchars = { eob = " " },
 	number = true,
@@ -25,8 +25,6 @@ local options = {
 
 	spell = true,
 }
-
-vim.cmd("set colorcolumn=80")
 
 for option, value in pairs(options) do
 	vim.opt[option] = value
