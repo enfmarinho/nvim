@@ -25,6 +25,9 @@ return {
 				"norg",
 				"markdown",
 				"markdown_inline",
+				"rust",
+				"bash",
+				"regex",
 			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
