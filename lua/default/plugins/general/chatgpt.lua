@@ -15,7 +15,7 @@ return {
 		--       you don't get the right answers.
 		--                                     ~ Robert Half]]
 		require("chatgpt").setup({
-			api_key_cmd = "/Users/eduardomarinho/.local/state/nvim/chatgpt_api_key",
+			api_key_cmd = "/home/enfmarinho/.local/state/nvim/chatgpt_api_key",
 			yank_register = "+",
 			edit_with_instructions = {
 				diff = false,
