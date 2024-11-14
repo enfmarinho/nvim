@@ -32,6 +32,7 @@ return {
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"cmakelang",
+				"cmake-language-server",
 				"clang-format",
 				"codelldb",
 				"lua-language-server",
@@ -41,6 +42,7 @@ return {
 				"gofumpt",
 				"golines",
 				"ruff",
+				"ruff-lsp",
 				"mypy",
 				"pyright",
 				"reorder-python-imports",
