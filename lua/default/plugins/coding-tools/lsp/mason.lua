@@ -42,7 +42,6 @@ return {
 				"gofumpt",
 				"golines",
 				"ruff",
-				"ruff-lsp",
 				"mypy",
 				"pyright",
 				"reorder-python-imports",

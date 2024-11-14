@@ -82,11 +82,6 @@ return {
 			capabilities = default_capabilities,
 			on_attach = on_attach,
 		})
-		-- Configure python server
-		lspconfig.ruff_lsp.setup({
-			capabilities = default_capabilities,
-			on_attach = on_attach,
-		})
 		-- Configure lua server
 		lspconfig.lua_ls.setup({
 			capabilities = default_capabilities,
