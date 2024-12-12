@@ -14,6 +14,7 @@ return {
 				"vimdoc",
 				"query",
 				"cpp",
+				"python",
 				"diff",
 				"doxygen",
 				"java",
