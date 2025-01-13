@@ -3,7 +3,7 @@ return {
 	ft = "norg",
 	event = "VeryLazy",
 	enabled = true,
-	version = "v7.0.0",
+	version = "*",
 	build = ":Neorg sync-parsers",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -13,32 +13,11 @@ return {
 			load = {
 				["core.defaults"] = {},
 				["core.concealer"] = {},
-				-- ["core.ui.calendar"] = {},
+				["core.ui.calendar"] = {},
 				["core.keybinds"] = {
 					config = {
-						default_keybinds = false,
+						default_keybinds = true,
 						hook = function(keybinds)
-							keybinds.map(
-								"norg",
-								"n",
-								"<leader>nd",
-								"<cmd> Neorg keybind norg core.qol.todo_items.todo.task_done <cr>",
-								{ desc = "Mark as done" }
-							)
-							keybinds.map(
-								"norg",
-								"n",
-								"<leader>nu",
-								"<cmd> Neorg keybind norg core.qol.todo_items.todo.task_undone <cr>",
-								{ desc = "Mark as undone" }
-							)
-							keybinds.map(
-								"norg",
-								"n",
-								"<leader>n!",
-								"<cmd> Neorg keybind norg core.qol.todo_items.todo.task_imporant <cr>",
-								{ desc = "Mark as important" }
-							)
 							keybinds.map(
 								"norg",
 								"n",
@@ -64,6 +43,7 @@ return {
 		vim.keymap.set("n", "<leader>ni", "<cmd> Neorg index <cr>", { desc = "Open neorg index" })
 		vim.keymap.set("n", "<leader>nj", "<cmd> Neorg journal toc open <cr>", { desc = "Open neorg journal" })
 		vim.keymap.set("n", "<leader>nr", "<cmd> Neorg journal today <cr>", { desc = "Open today's report" })
+		vim.keymap.set("n", "<leader>ns", "<cmd> Neorg toc <cr>", { desc = "Open table of contents" })
 		vim.keymap.set("n", "<leader>nt", "<cmd> e ~/Notes/TO-DO.norg <cr>", { desc = "Open TO-DO list" })
 
 		vim.wo.foldlevel = 99
