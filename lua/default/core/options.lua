@@ -15,7 +15,7 @@ local options = {
 	smarttab = true,
 	tabstop = 4,
 	numberwidth = 4,
-	shiftwidth = 2,
+	shiftwidth = 4,
 	expandtab = true,
 	softtabstop = 4,
 
