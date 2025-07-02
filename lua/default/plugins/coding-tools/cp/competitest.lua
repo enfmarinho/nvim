@@ -1,6 +1,6 @@
 return {
 	"xeluxee/competitest.nvim",
-	enabled = true,
+	enabled = false,
 	event = "VeryLazy",
 	dependencies = "MunifTanjim/nui.nvim",
 	config = function()
