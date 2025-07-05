@@ -1,7 +1,6 @@
 return {
 	"nvimtools/none-ls.nvim",
 	event = "VeryLazy",
-	commit = "bb680d752cec37949faca7a1f509e2fe67ab418a",
 	enabled = "leetcode.nvim" ~= vim.fn.argv()[1],
 	opts = function()
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -21,18 +20,12 @@ return {
 				}),
 				formatting.cmake_format,
 				formatting.stylua,
-				formatting.rustfmt,
 				formatting.gofumpt,
 				formatting.goimports_reviser,
 				formatting.golines,
 				formatting.swiftlint,
 				formatting.swiftformat,
-				-- diagnostics.mypy,
-				formatting.ruff,
-				formatting.reorder_python_imports,
-				-- diagnostics.credo,
 				formatting.mix,
-				-- diagnostics.pylint,
 			},
 
 			-- autoformatting on save.
