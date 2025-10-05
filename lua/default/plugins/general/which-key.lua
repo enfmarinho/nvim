@@ -1,6 +1,9 @@
 return {
 	"folke/which-key.nvim",
 	enabled = true,
+	dependencies = {
+		"nvim-mini/mini.icons",
+	},
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
