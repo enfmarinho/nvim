@@ -41,3 +41,6 @@ vim.keymap.set("n", "<leader>le", "<cmd> RustLsp expandMacro <cr>", opts)
 
 opts.desc = "Go to parent module"
 vim.keymap.set("n", "<leader>lm", "<cmd> RustLsp parentModule <cr>", opts)
+
+opts.desc = "Format"
+vim.keymap.set("n", "<leader>lF", "<cmd> RustFmt <cr>", opts)
