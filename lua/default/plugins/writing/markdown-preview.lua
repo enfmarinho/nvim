@@ -4,9 +4,7 @@ return {
 	event = "VeryLazy",
 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 	enabled = true,
-	build = function()
-		vim.fn["mkdp#util#install"]()
-	end,
+	build = "cd app && yarn install",
 	config = function()
 		vim.keymap.set("n", "<leader>pm", "<cmd> MarkdownPreview <cr>", { desc = "Preview markdown" })
 	end,
