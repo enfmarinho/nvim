@@ -6,6 +6,7 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		"folke/neodev.nvim",
 	},
+	opts = { diagnostics = { virtual_text = false } },
 	config = function()
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function()
