@@ -196,4 +196,16 @@ local rose_pine = {
 	end,
 }
 
+local hubbamax = {
+	"alexpasmantier/hubbamax.nvim",
+	lazy = false,
+	priority = 1000,
+
+	config = function()
+		require("hubbamax").setup({
+			transparent_background = true,
+		})
+	end,
+}
+
 return catppuccin
