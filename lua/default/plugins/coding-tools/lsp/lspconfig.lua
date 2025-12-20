@@ -37,20 +37,29 @@ return {
 				opts.desc = "Show documentation for what is under cursor"
 				vim.keymap.set("n", "<leader>lk", vim.lsp.buf.hover, opts)
 
-				-- opts.desc = "Show LSP references and definitions"
-				-- vim.keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+				opts.desc = "Show LSP references on telescope"
+				vim.keymap.set("n", "<leader>lrt", "<cmd>Telescope lsp_references<CR>", opts)
 
-				-- opts.desc = "Show LSP definitions"
-				-- vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+				opts.desc = "Show LSP references"
+				vim.keymap.set("n", "<leader>lrr", vim.lsp.buf.references, opts)
 
-				-- opts.desc = "Show LSP implementations"
-				-- vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+				opts.desc = "Show LSP implementations on telescope"
+				vim.keymap.set("n", "lti", "<cmd>Telescope lsp_implementations<CR>", opts)
 
-				-- opts.desc = "Show LSP type definitions"
-				-- vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+				opts.desc = "Show LSP implementations"
+				vim.keymap.set("n", "lri", vim.lsp.buf.implementation, opts)
+
+				opts.desc = "Show LSP type definitions on telescope"
+				vim.keymap.set("n", "ltt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+
+				opts.desc = "Show LSP type definitions"
+				vim.keymap.set("n", "lrt", vim.lsp.buf.type_definition, opts)
 
 				opts.desc = "Restart LSP"
 				vim.keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
+
+				opts.desc = "Signature help"
+				vim.keymap.set("i", "CRTL-S", vim.lsp.buf.signature_help, opts)
 			end,
 		})
 
