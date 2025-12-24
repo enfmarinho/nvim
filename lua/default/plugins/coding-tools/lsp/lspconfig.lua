@@ -44,16 +44,16 @@ return {
 				vim.keymap.set("n", "<leader>lrr", vim.lsp.buf.references, opts)
 
 				opts.desc = "Show LSP implementations on telescope"
-				vim.keymap.set("n", "lti", "<cmd>Telescope lsp_implementations<CR>", opts)
+				vim.keymap.set("n", "<leader>lti", "<cmd>Telescope lsp_implementations<CR>", opts)
 
 				opts.desc = "Show LSP implementations"
-				vim.keymap.set("n", "lri", vim.lsp.buf.implementation, opts)
+				vim.keymap.set("n", "<leader>lri", vim.lsp.buf.implementation, opts)
 
 				opts.desc = "Show LSP type definitions on telescope"
-				vim.keymap.set("n", "ltt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+				vim.keymap.set("n", "<leader>ltt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 
 				opts.desc = "Show LSP type definitions"
-				vim.keymap.set("n", "lrt", vim.lsp.buf.type_definition, opts)
+				vim.keymap.set("n", "<leader>lrt", vim.lsp.buf.type_definition, opts)
 
 				opts.desc = "Restart LSP"
 				vim.keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
