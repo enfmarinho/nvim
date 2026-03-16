@@ -1,10 +1,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	event = "VeryLazy",
+	branch = "master",
 	build = ":TSUpdate",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter-refactor",
-	},
+	dependencies = {},
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
