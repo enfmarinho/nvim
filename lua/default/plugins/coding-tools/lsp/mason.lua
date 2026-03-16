@@ -32,7 +32,7 @@ return {
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"cmakelang",
-				"cmake-language-server",
+				-- "cmake-language-server",
 				"clang-format",
 				"codelldb",
 				"lua-language-server",
