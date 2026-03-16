@@ -1,5 +1,6 @@
 return {
 	"alexpasmantier/krust.nvim",
+	enabled = false,
 	ft = "rust",
 	opts = {
 		keymap = "<leader>lk",
