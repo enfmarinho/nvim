@@ -1,7 +1,7 @@
 return {
 	"folke/neodev.nvim",
 	event = "VeryLazy",
-	enabled = true,
+	enabled = false,
 	opts = {
 		library = {
 			enabled = true,
