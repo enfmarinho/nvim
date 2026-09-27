@@ -36,7 +36,7 @@ return {
 				"clang-format",
 				"codelldb",
 				"lua-language-server",
-				"stylua",
+				-- "stylua",
 				"rust-analyzer",
 				"goimports-reviser",
 				"gofumpt",

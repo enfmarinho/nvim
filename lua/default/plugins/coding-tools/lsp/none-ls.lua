@@ -19,7 +19,7 @@ return {
 					},
 				}),
 				formatting.cmake_format,
-				formatting.stylua,
+				-- formatting.stylua,
 				formatting.gofumpt,
 				formatting.goimports_reviser,
 				formatting.golines,
@@ -34,7 +34,7 @@ return {
 					return
 				end
 
-				if client.supports_method("textDocument/formatting") then
+				if client:supports_method("textDocument/formatting") then
 					vim.api.nvim_clear_autocmds({
 						group = augroup,
 						buffer = bufnr,
