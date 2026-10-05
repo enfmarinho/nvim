@@ -45,7 +45,7 @@ return {
 				"mypy",
 				"pyright",
 				"reorder-python-imports",
-				"swiftlint",
+				-- "swiftlint",
 			},
 		})
 	end,

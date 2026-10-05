@@ -16,7 +16,7 @@ return {
 				["core.ui.calendar"] = {},
 				["core.keybinds"] = {
 					config = {
-						default_keybinds = true,
+						default_keybinds = false,
 						hook = function(keybinds)
 							keybinds.map(
 								"norg",

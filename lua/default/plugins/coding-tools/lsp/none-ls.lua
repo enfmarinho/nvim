@@ -23,9 +23,9 @@ return {
 				formatting.gofumpt,
 				formatting.goimports_reviser,
 				formatting.golines,
-				formatting.swiftlint,
-				formatting.swiftformat,
-				formatting.mix,
+				-- formatting.swiftlint,
+				-- formatting.swiftformat,
+				-- formatting.mix,
 			},
 
 			-- autoformatting on save.
