@@ -29,11 +29,11 @@ return {
 				opts.desc = "Show line diagnostics"
 				vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts)
 
-				opts.desc = "Go to previous diagnostic"
-				vim.keymap.set("n", "<leader>lp", vim.diagnostic.goto_prev, opts)
+                opts.desc = "Go to previous diagnostic"
+                vim.keymap.set("n", "<leader>lp", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
 
-				opts.desc = "Go to next diagnostic"
-				vim.keymap.set("n", "<leader>ln", vim.diagnostic.goto_next, opts)
+                opts.desc = "Go to next diagnostic"
+                vim.keymap.set("n", "<leader>ln", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
 
 				opts.desc = "Show documentation for what is under cursor"
 				vim.keymap.set("n", "<leader>lk", vim.lsp.buf.hover, opts)
