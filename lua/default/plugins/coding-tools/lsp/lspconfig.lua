@@ -60,7 +60,7 @@ return {
 				vim.keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
 
 				opts.desc = "Signature help"
-				vim.keymap.set("i", "CRTL-S", vim.lsp.buf.signature_help, opts)
+				vim.keymap.set("i", "C-s", vim.lsp.buf.signature_help, opts)
 			end,
 		})
 
