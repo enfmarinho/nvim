@@ -43,4 +43,6 @@ opts.desc = "Go to parent module"
 vim.keymap.set("n", "<leader>lm", "<cmd> RustLsp parentModule <cr>", opts)
 
 opts.desc = "Format"
-vim.keymap.set("n", "<leader>lF", "<cmd> RustFmt <cr>", opts)
+vim.keymap.set("n", "<leader>lF", function()
+	vim.lsp.buf.format({ async = false, filter = function(c) return c.name:match("rust.analyzer") ~= nil end })
+end, opts)

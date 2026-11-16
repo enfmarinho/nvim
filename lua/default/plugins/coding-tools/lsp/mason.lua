@@ -27,6 +27,7 @@ return {
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true,
+			automatic_enable = { exclude = { "rust_analyzer" } },
 		})
 
 		mason_tool_installer.setup({
