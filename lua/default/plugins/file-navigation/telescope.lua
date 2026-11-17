@@ -14,25 +14,17 @@ return {
 			defaults = {
 				path_display = { "truncate " },
 				preview = {
-					-- View images
+					-- Render images with snacks.image
 					mime_hook = function(filepath, bufnr, opts)
-						local is_image = function(filepath)
-							local image_extensions = { "png", "jpg" } -- Supported image formats
-							local split_path = vim.split(filepath:lower(), ".", { plain = true })
-							local extension = split_path[#split_path]
-							return vim.tbl_contains(image_extensions, extension)
-						end
-						if is_image(filepath) then
-							local term = vim.api.nvim_open_term(bufnr, {})
-							local function send_output(_, data, _)
-								for _, d in ipairs(data) do
-									vim.api.nvim_chan_send(term, d .. "\r\n")
+						local ok, snacks_image = pcall(function()
+							return Snacks.image
+						end)
+						if ok and snacks_image and snacks_image.supports_file(filepath) then
+							vim.schedule(function()
+								if vim.api.nvim_buf_is_valid(bufnr) then
+									snacks_image.buf.attach(bufnr, { src = filepath })
 								end
-							end
-							vim.fn.jobstart({
-								"catimg",
-								filepath, -- Terminal image viewer command
-							}, { on_stdout = send_output, stdout_buffered = true, pty = true })
+							end)
 						else
 							require("telescope.previewers.utils").set_preview_message(
 								bufnr,
